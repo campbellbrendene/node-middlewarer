@@ -70,7 +70,7 @@ Similar to `Controller#run`. Executes **and `await`s** all chained callbacks.
 ## Synchronous Example
 
 ```typescript
-import { Controller, Runnable } from "middlewarer";
+import { Controller } from "middlewarer";
 
 const controller = new Controller<[number]>(); // Callback parameter type array
 
@@ -97,7 +97,7 @@ controller.run(42); // Will trigger all three chained callbacks
 ## Asynchronous Example
 
 ```typescript
-import { AsyncController, Runnable } from "middlewarer";
+import { AsyncController } from "middlewarer";
 
 // A dummy representing an asynchronous API call
 async function checkAnswer(value: number): Promise<boolean> {
